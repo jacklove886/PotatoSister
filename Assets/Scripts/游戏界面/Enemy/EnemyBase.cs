@@ -49,6 +49,7 @@ public class EnemyBase : MonoBehaviour
     {
         Move();
         Attack();
+        UpdateSkill();
     }
 
     public virtual void Move()
@@ -87,15 +88,16 @@ public class EnemyBase : MonoBehaviour
         if (distance <= define.range)
         {
             //发动技能
-            Vector2 direction = (PlayerController.Instance.transform.position - transform.position).normalized;
+            Vector2 direction = (PlayerController.Instance.transform.position - transform.position).normalized;   
             LaunchSkill(direction);
+            lastSkillTime = Time.time;
         }
     }
 
     //发动技能
-    public virtual void LaunchSkill(Vector2 direction)
+    protected virtual void LaunchSkill(Vector2 direction)
     {
-        lastSkillTime = Time.time;
+        
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

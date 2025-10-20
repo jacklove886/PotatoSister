@@ -407,6 +407,7 @@ MonoBehaviour:
   weapon: []
   currentWave: 1
   currentLevel: 0
+  EnemyBullet: {fileID: 3569658735494355632, guid: 9b45efb1c0bcecc4fa758b45379a85a2, type: 3}
 --- !u!4 &142007350
 Transform:
   m_ObjectHideFlags: 0

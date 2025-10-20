@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
     public DiffDefine diff = null;
     public int currentWave=1;//当前波次
     public int currentLevel;//当前关卡
+    public GameObject EnemyBullet;
 
     private void Awake()
     {
